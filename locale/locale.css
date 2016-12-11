@@ -1,0 +1,7 @@
+body.ru *[lang=en] {
+	display: none;
+}
+
+body.en *[lang=ru] {
+	display: none;
+}
