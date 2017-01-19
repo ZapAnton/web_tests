@@ -1,6 +1,6 @@
 var current_answer;
 var start_time;
-var count = 0;
+var answer_count = 0;
 
 function start_calculations() {
     generate_expression();
@@ -12,7 +12,7 @@ function start_calculations() {
 function stop_calculations() {
 	hide_expression();
 	
-	console.log ("Правильных ответов " + count);
+	console.log ("Правильных ответов " + answer_count);
 }
 
 function show_expression() {
@@ -61,7 +61,7 @@ function check_answer() {
         
         if (Number(user_answer) === current_answer) {
             console.log("Верно! Вы потратили " + expression_time.toFixed(2) + " секунд");
-            count++;
+            answer_count++;
         } else {
             console.log("Неверно. Правильный ответ - " + current_answer 
 				+ ". Вы потратили " + expression_time.toFixed(2) + " секунд.");
