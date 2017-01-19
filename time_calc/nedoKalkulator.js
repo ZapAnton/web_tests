@@ -6,6 +6,11 @@ function start_calculations() {
     generate_expression();
     
     document.getElementById("start_button").style.display = "none";
+	
+	document.getElementById("rand_numbers").style.visibility = 'visible'; 
+	
+    document.getElementById("user_answer").style.visibility = 'visible'; 
+    document.getElementById("finish_button").style.visibility = 'visible';
 }
 
 function generate_expression() {    
@@ -19,9 +24,6 @@ function generate_expression() {
     var expression = rand + " + " + rand2 + " = ";
     
     document.getElementById("rand_numbers").innerHTML = expression;
-    
-    document.getElementById("user_answer").style.visibility = 'visible'; 
-    document.getElementById("finish_button").style.visibility = 'visible';
 }
 
 function check_answer() {
@@ -52,21 +54,14 @@ function check_answer() {
     document.getElementById("user_answer").value = " ";   
 }
 
-function stop_calculations () {
-   document.getElementById("renew_button").style.visibility = 'visible';
-   document.getElementById("finish_button").style.display = "none";
-   document.getElementById("rand_numbers").style.display = "none";
-   document.getElementById("user_answer").style.display = "none";
-    
-   console.log ("Правильных ответов " + count);
-}
+function stop_calculations() {
+	document.getElementById("finish_button").style.visibility = "hidden";
 
-function renew_calculations () {
-	document.getElementById("renew_button").style.visibility = 'hidden';
-	document.getElementById("finish_button").style.display = "inline-block";
-	document.getElementById("rand_numbers").style.display = "inline-block";
-	document.getElementById("user_answer").style.display = "inline-block";
+	document.getElementById("start_button").style.display = "inline-block";
+	document.getElementById("start_button").value = "Начать заново?";	  
 
-	generate_expression;
-	check_answer;
+	document.getElementById("rand_numbers").style.visibility = "hidden";
+	document.getElementById("user_answer").style.visibility = "hidden";
+
+	console.log ("Правильных ответов " + count);
 }
