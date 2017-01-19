@@ -1,0 +1,24 @@
+
+#expression {
+    margin: 5px;
+}
+
+#rand_numbers {
+    float: left;
+}
+
+#user_answer {
+    float: left;
+    margin-left: 10px;
+    width: 80px;
+    visibility: hidden;
+}
+
+#finish_button {
+    visibility: hidden;
+}
+
+
+#renew_button {
+    visibility: hidden;
+

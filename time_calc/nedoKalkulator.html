@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="nedoKalkulator.css">
+        <script type="text/javascript" src="nedoKalkulator.js"></script>
+    </head>
+    
+    <body>
+        <input id="start_button" type="button" onclick="start_calculations()" value="Начать">
+        
+        <div id="expression">
+            <div id="rand_numbers"></div>
+            
+            <input type="text"  id="user_answer" onkeydown="check_answer()">
+            
+             <input type="button" id= "finish_button" value="стоп" onclick="stop_calculations() ">
+            
+            <input type="button" id ="renew_button" value="Начать заново?" onclick="renew_calculations() ">
+        
+        </div>
+    </body>
+</html>
+
