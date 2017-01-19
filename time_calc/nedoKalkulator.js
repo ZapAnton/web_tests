@@ -52,15 +52,12 @@ function check_answer() {
 }
 
 function stop_calculations () {
-//    var EndAll_Time = performance.now ();
-//    var CheckAll_Time =(EndAll_Time - start_time)/1000.0;
    document.getElementById("renew_button").style.visibility = 'visible';
    document.getElementById("finish_button").style.display = "none";
    document.getElementById("rand_numbers").style.display = "none";
    document.getElementById("user_answer").style.display = "none";
     
-   console.log ("Правильных ответов " + count);  
-//   console.log ("Общее время " + CheckAll_Time.toFixed(2)+" cекунд");
+   console.log ("Правильных ответов " + count);
 }
 
 function renew_calculations () {
