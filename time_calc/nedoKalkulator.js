@@ -40,7 +40,8 @@ function check_answer() {
             console.log("Верно! Вы потратили " + expression_time.toFixed(2) + " секунд");
             count++;
         } else {
-            console.log("Неверно. Правильный ответ - " + current_answer + ". Вы потратили " + expression_time.toFixed(2) + " секунд.");
+            console.log("Неверно. Правильный ответ - " + current_answer 
+				+ ". Вы потратили " + expression_time.toFixed(2) + " секунд.");
         }
        
         generate_expression();       
