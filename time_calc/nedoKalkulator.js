@@ -4,13 +4,34 @@ var count = 0;
 
 function start_calculations() {
     generate_expression();
-    
+	
+	show_expression();
+}
+
+
+function stop_calculations() {
+	hide_expression();
+	
+	console.log ("Правильных ответов " + count);
+}
+
+function show_expression() {
     document.getElementById("start_button").style.display = "none";
 	
 	document.getElementById("rand_numbers").style.visibility = 'visible'; 
 	
     document.getElementById("user_answer").style.visibility = 'visible'; 
     document.getElementById("finish_button").style.visibility = 'visible';
+}
+
+function hide_expression() {
+	document.getElementById("finish_button").style.visibility = "hidden";
+
+	document.getElementById("start_button").style.display = "inline-block";
+	document.getElementById("start_button").value = "Начать заново?";	  
+
+	document.getElementById("rand_numbers").style.visibility = "hidden";
+	document.getElementById("user_answer").style.visibility = "hidden";
 }
 
 function generate_expression() {    
@@ -52,16 +73,4 @@ function check_answer() {
     }
 	
     document.getElementById("user_answer").value = " ";   
-}
-
-function stop_calculations() {
-	document.getElementById("finish_button").style.visibility = "hidden";
-
-	document.getElementById("start_button").style.display = "inline-block";
-	document.getElementById("start_button").value = "Начать заново?";	  
-
-	document.getElementById("rand_numbers").style.visibility = "hidden";
-	document.getElementById("user_answer").style.visibility = "hidden";
-
-	console.log ("Правильных ответов " + count);
 }
